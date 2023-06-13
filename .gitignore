@@ -97,7 +97,7 @@ celerybeat-schedule.*
 *.sage.py
 
 # Environments
-.env
+atryaVenv/
 .venv
 env/
 venv/
@@ -106,8 +106,12 @@ env.bak/
 venv.bak/
 .idea
 .idea/
+.idea/*
 # mkdocs documentation
 /site
+.idea/backend.iml
+.idea/misc.xml
+.idea/vcs.xml
 
 # mypy
 .mypy_cache/

@@ -2,10 +2,11 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import openai
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import dotenv_values
 
-openai.api_key = ""
+config = dotenv_values(".env")
 
-
+openai.api_key = config['OPENAI_API_KEY']
 app = FastAPI()
 
 app.add_middleware(
