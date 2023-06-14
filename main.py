@@ -16,21 +16,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class Task(BaseModel):
-    id: int
-    title: str
-    description: str
-    ai_advice: str = ""
-    done: bool
-
 class Conversation(BaseModel):
     text: str
 
-tasks = []
-
-@app.get("/tasks/")
-async def read_tasks():
-    return tasks
+@app.get("/")
+async def home():
+    return {"message": "Hello World"}
 
 
 @app.post("/chat/")
